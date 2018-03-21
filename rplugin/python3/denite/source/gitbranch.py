@@ -63,7 +63,7 @@ class Source(BaseSource):
         root = context['__root']
         if not root:
             return []
-        args = ['git', 'branch', '--no-color', '-a']
+        args = ['git', 'branch', '--no-color']
         self.print_message(context, ' '.join(args))
         lines = run_command(args, root)
         candidates = []
